@@ -1,4 +1,4 @@
-import cards from "./gallery-items.js";
+import cards from "../gallery-items.js";
 
 const refs = {
     gallery: document.querySelector('.js-gallery'),
