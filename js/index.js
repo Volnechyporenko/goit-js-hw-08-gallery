@@ -40,7 +40,7 @@ function openLightbox(event) {
 function addOverlayListeners() {
     refs.closeOverlayBtn.addEventListener('click', closeOverlay);
     refs.lightbox.addEventListener('click', clickOnOutClose);
-    window.addEventListener('keydown', onOverlayPress);
+    window.addEventListener('keydown', keysPressHandle);
 }
 
 function closeOverlay() {
@@ -49,7 +49,7 @@ function closeOverlay() {
     }
 
 function removeOverlayListeners() {
-    window.removeEventListener('keydown', onOverlayPress);
+    window.removeEventListener('keydown', keysPressHandle);
     refs.lightbox.removeEventListener('click', clickOnOutClose);
     refs.closeOverlayBtn.removeEventListener('click', closeOverlay);
 }
@@ -64,7 +64,7 @@ function clickOnOutClose(event) {
     }
 }
 
-function onOverlayPress(event) {
+function keysPressHandle(event) {
     if(event.code === 'Escape') {
         closeOverlay();
     }
